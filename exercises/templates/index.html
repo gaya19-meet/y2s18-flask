@@ -9,8 +9,21 @@
 
 </head>
 <body>
-	<h1>"my fav sport is: dancing " </h1>
-	<p> "it is the best sport just beacouse it is"</p>
+	<!-- <h1>"my fav sport is: dancing " </h1> -->
+	<!-- <p> "it is the best sport just beacouse it is"</p> -->
+	<h1>players</h1>
+		{% if no_players == True %}
+			<p> I have no fav players and I dont like music </p>
+			<p> it is good and if U dont like it you are very sad person </p>
+		{% else %}
+			<h2>the players I like the most:</h2>
+			<p>i like music , my fav players are:</p>
+			{% for player in players %}
+			<ul>
+			<li> {{player}}</li>
+			</ul>
+			{% endfor %}
+		{% endif%}
 
 </body>
 </html>
